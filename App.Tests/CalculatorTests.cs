@@ -2,7 +2,7 @@
 
 public class CalculatorTests
 {
-    [Fact]
+    [Fact(DisplayName ="Deve somar dois numeros")]
     public void ShouldSumTwoNumbers()
     {
         var cal = new Calculator();
