@@ -7,10 +7,10 @@ on:
 
 jobs:
   versioning:
-    uses: laboratorio-net/actions/.github/workflows/git-version.yaml@master
+    uses: laboratorio-net/actions/.github/workflows/git-version.yaml@main
 
   build:
-    uses: laboratorio-net/actions/.github/workflows/build-dotnet.yaml@master
+    uses: laboratorio-net/actions/.github/workflows/build-dotnet.yaml@main
     needs: Versioning
     with:
       solution-name: TestPipeLineNet.sln
@@ -19,7 +19,7 @@ jobs:
       sonar-token: ${{ secrets.SONAR_TOKEN }}  
 
   tag:
-    uses: laboratorio-net/actions/.github/workflows/create-tag.yaml@master
+    uses: laboratorio-net/actions/.github/workflows/create-tag.yaml@main
     needs: [versioning, build]
     with:
       version: ${{needs.versioning.outputs.version}}
