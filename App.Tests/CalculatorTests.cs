@@ -10,4 +10,13 @@ public class CalculatorTests
 
         Assert.Equal(3, cal.Result);
     }
+
+    [Fact(DisplayName ="Zero + Zero deve ser zero")]
+    public void ZeroPlusZeroShouldBeZero()
+    {
+        var cal = new Calculator();
+        cal.Sum(0, 0);
+
+        Assert.Equal(0, cal.Result);
+    }
 }
