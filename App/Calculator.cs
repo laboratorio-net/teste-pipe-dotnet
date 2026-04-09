@@ -9,6 +9,11 @@ namespace App
             Result = first + second;
         }
 
+        public void Sum(params int[] numbers)
+        {
+            Result = numbers.Sum();
+        }
+
         public void Subtract(int first, int second)
         {
             Result = first - second;            
