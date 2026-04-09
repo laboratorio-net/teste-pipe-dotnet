@@ -8,5 +8,10 @@ namespace App
         {
             Result = first + second;
         }
+
+        public void Subtract(int first, int second)
+        {
+            Result = first - second;            
+        }
     }
 }
