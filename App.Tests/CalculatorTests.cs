@@ -20,6 +20,15 @@ public class CalculatorTests
         Assert.Equal(0, cal.Result);
     }
 
+    [Fact(DisplayName = "Deve multiplicar multiplos números")]
+    public void ShouldSumMultiplesNumbers()
+    {
+        var cal = new Calculator();
+        cal.Sum(1, 2, 3, 4, 5);
+
+        Assert.Equal(15, cal.Result);
+    }
+
     [Fact(DisplayName = "Deve subtrair dois números")]
     public void ShouldSubtractTwoNumbers()
     {
