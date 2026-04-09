@@ -19,4 +19,13 @@ public class CalculatorTests
 
         Assert.Equal(0, cal.Result);
     }
+
+    [Fact(DisplayName ="Deve subtrair dois números")]
+     public void ShouldSubtractTwoNumbers()
+    {
+        var cal = new Calculator();
+        cal.Subtract(2, 1);
+
+        Assert.Equal(1, cal.Result);
+    }
 }
